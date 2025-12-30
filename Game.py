@@ -5,11 +5,16 @@ from Enum import EnumCardStatus
 from Player import Player
 
 
-class Game():    
-    def __init__(self,size=16):
+class Game(Player):    
+    def __init__(self, name,size=16):
+       super().__init__(name)
        self.board=BoardGame(size)
-       self.playerList=[Player("yael"),Computer("computer")]
+       self.playerList=[Player(name),Computer("computer")]
        self.index=0 
+   #  def __init__(self,size=16):
+   #     self.board=BoardGame(size)
+   #     self.playerList=[Player("yael"),Computer("computer")]
+   #     self.index=0 
 
 
     def init_board(self):

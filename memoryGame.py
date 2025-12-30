@@ -4,13 +4,10 @@ from Player import Player
 
 
 def main():
-  b=Game()
-  b.init_board()
-  b.print_board()
-  # b.print()
-  b.real_game()
-
-
+  start=Game("yael",6)#חובה להכניס שם שחקן ואפשרי להגדיר גודל לוח משחק
+  start.init_board()
+  start.print_board()
+  start.real_game()
 
 if __name__ == "__main__":
     main()
